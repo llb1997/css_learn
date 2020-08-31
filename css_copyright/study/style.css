@@ -232,6 +232,7 @@ body {
     width: 1225px;
 }
 .box-bd ul li {
+    position: relative;
     width: 230px;
     height: 278px;
     background-color: #fff;
@@ -239,7 +240,8 @@ body {
     margin-right: 15px;
     margin-bottom: 15px;
 }
-.box-bd ul li img {
+/* li的亲儿子img才可以 */
+.box-bd ul li > img {
     /* 让图片和父亲一样宽，这样不会超出li的大小了 */
     width: 100%;
 }
@@ -248,6 +250,11 @@ body {
     font-size: 14px;
     color: #050505;
     font-weight: 400;
+}
+.box-bd ul li em {
+    position: absolute;
+    top:4px;
+    right: -4px;
 }
 .box-bd .info {
     margin: 0 20px 0 25px;
